@@ -12,6 +12,10 @@ return new class extends Migration {
     {
         Schema::create('pages', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained('users', 'id')->cascadeOnDelete();
+            $table->string('title');
+            $table->text('description');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

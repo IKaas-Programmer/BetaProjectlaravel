@@ -1,10 +1,5 @@
 import preset from "./vendor/filament/support/tailwind.config.preset";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@tailwind variants;
-
 export default {
     presets: [preset],
     content: [
